@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+print('hi')
 GPIO.setmode(GPIO.BCM)
 
 #buttons
