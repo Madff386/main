@@ -16,8 +16,9 @@ GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #blue
 
 def start_discord_bot(channel):
 	if channel == 17:
+		print('starting')
 		with open('token.txt', 'r') as f:
 			TOKEN = f.read()
-		os.popen(f'python covidbot.py {TOKEN}')
+		os.popen(f'python3 covidbot.py {TOKEN}')
 
 GPIO.add_event_detect(17, GPIO.RISING, callback=start_discord_bot)
